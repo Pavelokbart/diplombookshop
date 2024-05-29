@@ -1,0 +1,27 @@
+.input{
+    height: 30px;
+    width: 200px;
+    /* border: none; */
+}
+.error{
+    border: 2px solid red;
+}
+.forheader
+{
+    height: 40px;
+    width: 300px;
+    background: none;
+    border: none;
+}
+.forregist
+{
+    width: 544px;
+    height: 56px;
+    
+    background-color: #FFFFFF;
+
+}
+.forregist::placeholder {
+    padding-left: 20px;
+}
+

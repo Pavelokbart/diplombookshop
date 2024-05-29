@@ -1,0 +1,54 @@
+/* components/Header/Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 600px;
+}
+
+.header__search input {
+    border: none;
+    padding: 10px;
+    outline: none;
+    width: 580px;
+}
+
+.header__search button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.header__icons i {
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    
+}
+
+
+.header__cart-link, .header__user-link, .header__favorites-link  {
+    text-decoration: none; 
+    color: inherit; 
+}
+

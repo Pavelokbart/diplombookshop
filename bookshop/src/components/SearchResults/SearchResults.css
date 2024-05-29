@@ -1,0 +1,21 @@
+.results_item
+{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+.results_txt
+{
+    margin-top: 72px;
+    font-family: Bebas Neue;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+    text-align: left;
+    margin-bottom: 88px ;
+
+    
+}

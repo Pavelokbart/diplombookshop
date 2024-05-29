@@ -1,0 +1,46 @@
+
+.book-block {
+    width: 250px;
+   
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.book-image {
+    width: 100%;
+    height: auto;
+}
+
+.book-title {
+    font-size: 16px;
+    
+}
+
+.book-price {
+    font-family: 'Bebas Neue';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+
+}
+.book_bg
+{
+    background-color: rgb(134, 134, 216);
+}
+
+.book-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.book-link:hover {
+    text-decoration: underline; 
+}
+
+
+.book-link:hover .book-title {
+    color: #007BFF; 
+}

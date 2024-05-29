@@ -1,0 +1,45 @@
+/* components/Favorites/Favorites.css */
+.favorites {
+    padding: 20px;
+}
+
+.favorite-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.favorite-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.removebutton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.removebutton svg {
+    width: 20px;
+    height: 18px;
+    fill: red;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

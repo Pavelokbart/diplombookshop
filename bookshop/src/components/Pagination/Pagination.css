@@ -1,0 +1,44 @@
+.prevnext {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #DADADA;
+    padding-top: 72px;
+}
+
+.prevnext_prev, .prevnext_next {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.txtnext_firstcolum, .txtprev_firstcolum {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+}
+
+.txtprev_secondcolum, .txtnext_secondcolum {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #8D8E97;
+}
+
+.prev_button, .next_button {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.prev_button:disabled, .next_button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

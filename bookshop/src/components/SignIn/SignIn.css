@@ -7,6 +7,8 @@
 .wrapper{
     box-sizing: border-box;
     
+    font-family: "Bebas Neue", sans-serif;
+    
   }
   *,*::after,*::before{
     box-sizing: inherit ;
@@ -34,6 +36,8 @@
     font-weight: 400;
     line-height: 24px;
     text-align: left;
+    
+    font-family: "Bebas Neue", sans-serif;
 
 
 }
@@ -45,12 +49,14 @@
     font-weight: 700;
     line-height: 80px;
     text-align: left;
+    
+    font-family: "Bebas Neue", sans-serif;
 
 
 }
 .signform_form
 {
-    font-family: 'Inter';
+    
     margin-top: 72px;
     width: 624px;
     height: 472px;
@@ -63,6 +69,8 @@
     display: flex;
     flex-direction: column;
     
+    font-family: "Bebas Neue", sans-serif;
+    
     
     
 }
@@ -70,16 +78,20 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    
+    font-family: "Bebas Neue", sans-serif;
 
 }
 .form_forgot
 {
     margin-top: 16px;
-    font-family: 'Inter';
+    
 font-size: 16px;
 font-weight: 400;
 line-height: 20px;
 text-align: left;
+
+font-family: "Bebas Neue", sans-serif;
 
 
 }
@@ -88,19 +100,20 @@ text-align: left;
     margin-top: 45px;
     height: 56px;
     background: #313037;
-    font-family: 'Inter';
-font-size: 18px;
-font-weight: 600;
-line-height: 24px;
-color: #FFFFFF;
-border: none;
+    
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #FFFFFF;
+    border: none;
 }
 .form_accout
 {
     margin-top: 48px;
     display: flex;
     justify-content: center;
-    font-family: 'Inter';
+    
 font-size: 16px;
 font-weight: 500;
 line-height: 20px;
@@ -109,7 +122,7 @@ text-align: left;
 }
 .accout_link
 {
-    font-family: 'Inter';
+    
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;

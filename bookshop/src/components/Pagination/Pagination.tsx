@@ -1,9 +1,8 @@
+// components/Pagination/Pagination.tsx
+import React from 'react';
 import { ArrowLeft } from '../Icons/ArrowLeft';
 import { ArrowRight } from '../Icons/ArrowRight';
 import './Pagination.css';
-import { setCurrentPage } from '../../redux/actionCreators/booksActionCreators';
-import { INewBookState } from '../../types';
-import { useSelector,useDispatch } from 'react-redux';
 
 interface PaginationProps {
     currentPage: number;
@@ -11,38 +10,39 @@ interface PaginationProps {
     onPageChange: (page: number) => void;
 }
 
-const Pagination = () => {
-    const dispatch = useDispatch();
-    const currentPage = useSelector((state: { books: INewBookState }) => state.books.currentPage);
-    const itemsPerPage = useSelector((state: { books: INewBookState }) => state.books.itemsPerPage);
-    const totalBooks = useSelector((state: { books: INewBookState }) => state.books.books.length);
-    const totalPages = Math.ceil(totalBooks / itemsPerPage);
-
-    const handlePageChange = (page: number) => {
-        dispatch(setCurrentPage(page));
+const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) => {
+    const renderPageNumbers = () => {
+        const pageNumbers = [];
+        for (let i = 1; i <= totalPages; i++) {
+            pageNumbers.push(
+                <button
+                    key={i}
+                    className={`page-number ${currentPage === i ? 'active' : ''}`}
+                    onClick={() => onPageChange(i)}
+                >
+                    {i}
+                </button>
+            );
+        }
+        return pageNumbers;
     };
 
     return (
-        <div className="prevnext">
-            <div className="prevnext_prev prev">
+        <div className="pagination-container">
+            <div className="pagination">
                 <button
-                    className="prev_button"
-                    onClick={() => handlePageChange(currentPage - 1)}
+                    className="prev-button"
+                    onClick={() => onPageChange(currentPage - 1)}
                     disabled={currentPage === 1}
                 >
                     <ArrowLeft />
                 </button>
-                <div className="prev_txtprev">
-                    <div className="txtprev_firstcolum">Prev</div>
-                </div>
-            </div>
-            <div className="prevnext_next next">
-                <div className="next_txtnext">
-                    <div className="txtnext_firstcolum">Next</div>
+                <div className="page-numbers">
+                    {renderPageNumbers()}
                 </div>
                 <button
-                    className="next_button"
-                    onClick={() => handlePageChange(currentPage + 1)}
+                    className="next-button"
+                    onClick={() => onPageChange(currentPage + 1)}
                     disabled={currentPage === totalPages}
                 >
                     <ArrowRight />

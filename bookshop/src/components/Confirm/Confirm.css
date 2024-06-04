@@ -1,15 +1,12 @@
 .wrapper{
     box-sizing: border-box;
-    
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Open Sans";
   }
   *,*::after,*::before{
     box-sizing: inherit ;
     margin: 0;
     padding: 0;
   }
-
-
 
 .container{
     max-width: 1100px;
@@ -26,7 +23,6 @@
 .main_txtback
 {
 
-    
     font-family: "Bebas Neue", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -36,7 +32,6 @@
 }
 .main_txtregis
 {
-    
     font-family: "Bebas Neue", sans-serif;
 font-size: 56px;
 font-weight: 700;
@@ -44,13 +39,12 @@ line-height: 80px;
 text-align: left;
 
 } 
-.main_blockregistr
+.main_blockconf
 {
     margin-top: 72px;
     width: 624px;
-    height: 684px;
+    height: 500px;
     
-    font-family: "Bebas Neue", sans-serif;
     margin-left: 248px;
     padding-top: 40px;
     padding-left: 40px;
@@ -63,12 +57,16 @@ text-align: left;
     
     
 }
+.txt_check
+{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+
+}
 .main_button
 {
     height: 56px;
-    background: #313037;
-
-
+    
     font-family: "Bebas Neue", sans-serif;
 font-size: 18px;
 font-weight: 600;
@@ -80,7 +78,6 @@ color: #FFFFFF;
 }
 .main_txt
 {
-    
     font-family: "Bebas Neue", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -91,12 +88,11 @@ color: #FFFFFF;
 
 }
 .txt_update{
-    
     font-family: "Bebas Neue", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
-   
+    
 
 
 

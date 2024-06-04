@@ -71,7 +71,7 @@ const SignIn =({})=>{
 
                         </div>
                         <button onClick={handleSignIp} className="form_button">
-                            Sign Ip
+                            Sign In
  
                         </button>
                         <div className="form_accout">

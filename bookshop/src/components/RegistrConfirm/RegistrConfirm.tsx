@@ -6,11 +6,12 @@ import { useState } from "react";
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import { activateSignUp } from "../../redux/actionCreators/userActionCreators";
 
 const RegistrConfirm =({})=>{
     const [input1Value,setInput1Value]=useState('')
-
+    const navigate=useNavigate()
     const { uid='',token=''}=useParams()
     const dispatch = useDispatch();
     useEffect(()=>{
@@ -29,16 +30,15 @@ const RegistrConfirm =({})=>{
                         <div className="main_txtregis">
                         Registration Confirmmation
                         </div>
-                       <div className="main_blockregistr">
+                       <div className="main_blockconfirm">
                             <div className="main_txtconfirm">
-                                Please activite your account with the activation <br />
-                                Link <br />
-                                Please check your email
+                            You have confirmed your email!
     
                             </div>
                            
 
-                            <button className="main_button">
+                            <button
+                            onClick={()=>{navigate( `/books`)}} className="main_button">
                             Go to home
  
                             </button>
@@ -48,20 +48,7 @@ const RegistrConfirm =({})=>{
                             
                             
                         </div>
-                        <div className="main_bottom">
-                            <div className="bottom_top">
-                                <div className="bottom_left">
-                                ©2022 Blogfolio
-
-                                </div>
-                                <div className="bottom_right">
-                                All rights reserved
-
-                                </div>
-
-                            </div>
-                           
-                        </div>
+                        
                         
                     </div>
                 </div>

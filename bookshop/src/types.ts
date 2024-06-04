@@ -12,6 +12,10 @@ export enum INPUT_TYPES {
     PASSWORD = 'password',
     TEXT = 'text'
 }
+export interface ModalProps {
+    onClose: () => void;
+    children: React.ReactNode;
+}
 
 export interface IInput {
     label?: string;

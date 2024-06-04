@@ -1,0 +1,42 @@
+/* DetailBookRow.css */
+
+.similarbooks {
+    margin-top: 72px;
+    font-size: 24px;
+    margin-bottom: 48px;
+    font-family: 'Bebas Neue';
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: left;
+
+}
+
+.booksrows {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+
+.prev-button,
+.next-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+}
+
+
+
+

@@ -69,7 +69,7 @@ const SignUp =({})=>{
                             onChange={(e:any)=>handler('confirm',e.target.value)}
                             label={'Confirm password'}/>
 
-                            <button onClick={handleSignUp} className="main_button">
+                            <button onClick={handleSignUp} className="form_button">
                             Sign Up
  
                             </button>
@@ -83,20 +83,7 @@ const SignUp =({})=>{
                             
                             
                         </div>
-                        <div className="main_bottom">
-                            <div className="bottom_top">
-                                <div className="bottom_left">
-                                ©2022 Blogfolio
-
-                                </div>
-                                <div className="bottom_right">
-                                All rights reserved
-
-                                </div>
-
-                            </div>
-                           
-                        </div>
+                        
                         
                     </div>
                 </div>

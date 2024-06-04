@@ -1,24 +1,39 @@
-.detailbook_blockbook{
-    font-family: "Bebas Neue", sans-serif;
+/* BookDetail.css */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-.detailbook_title
-{
+
+.detailbook {
+    margin-top: 70px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.detailbook_title {
     font-family: "Bebas Neue", sans-serif;
     font-size: 56px;
     font-weight: 700;
     line-height: 64px;
     text-align: left;
-
     text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
 }
-.detailbook_blockbook
-{
+
+.detailbook_blockbook {
     margin-top: 20px;
     display: flex;
     gap: 110px;
+    animation: fadeIn 1.2s ease-in-out;
 }
-.blockbook_leftimg
-{
+
+.blockbook_leftimg {
     width: 400px;
     height: 400px;
     background-color: #f4d4da;
@@ -26,89 +41,81 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    animation: fadeIn 1.4s ease-in-out;
 }
-.bcg_btn
-{
+
+.bcg_btn {
     position: absolute;
     right: 0px;
     top: 0px;
     width: 56px;
     height: 56px;
-    background-color:  #313037;
+    background-color: #313037;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
+    animation: fadeIn 1.6s ease-in-out;
 }
-.heartbutton
-{
-   
-    background:none;
+
+.heartbutton {
+    background: none;
     border: none;
 }
-.right_price
-{
+
+.right_price {
     font-size: 30px;
     font-weight: 700;
 }
-.right_blockinf
-{
+
+.right_blockinf {
     margin-top: 20px;
     display: flex;
-    
     gap: 150px;
-
+    animation: fadeIn 1.8s ease-in-out;
 }
-.blockinf_leftcolum
-{
+
+.blockinf_leftcolum {
     color: gray;
 }
 
-.blockinf_rightcolum
-{
+.blockinf_rightcolum {
     font-weight: 700;
     text-align: right;
 }
-.blockinf_leftcolum, .blockinf_rightcolum
-{
+
+.blockinf_leftcolum, .blockinf_rightcolum {
     display: flex;
     flex-direction: column;
     gap: 20px;
     font-size: 23px;
 }
-.blockinf_btnlink
-{
+
+.blockinf_btnlink {
     margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    animation: fadeIn 2s ease-in-out;
 }
-.priceandstarts
-{
+
+.priceandstarts {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.right_previewlink
-{
-    text-decoration: none; 
+.right_previewlink {
+    text-decoration: none;
     color: inherit;
-    
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
     color: #313037;
-
-
-    
 }
-.right_button
-{
-    
+
+.right_button {
     border: none;
     background-color: rgb(42, 39, 39);
     color: white;
@@ -117,19 +124,21 @@
     width: 350px;
     height: 50px;
 }
-.right_button:hover{background-color: #4b4a4d;
+
+.right_button:hover {
+    background-color: #4b4a4d;
 }
 
 .right_button:active {
-  background-color: #313037;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    background-color: #313037;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .detailbook_description {
     display: flex;
     flex-direction: column;
-    
+    animation: fadeIn 2.2s ease-in-out;
 }
 
 .description_desc,
@@ -145,12 +154,11 @@
     margin: 10px 0;
     cursor: pointer;
     transition: background-color 0.3s ease;
-        font-family: Helios;
+    font-family: Helios;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-
 }
 
 .descrbutton:hover {
@@ -160,8 +168,17 @@
 .descrbutton:active {
     background-color: #bbb;
 }
-.blocks_descr
-{
+
+.blocks_descr {
     display: flex;
     gap: 40px;
+    animation: fadeIn 2.4s ease-in-out;
+}
+
+.links {
+    margin-top: 48px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    animation: fadeIn 2.6s ease-in-out;
 }

@@ -1,4 +1,3 @@
-// components/BookDetail/BookDetail.tsx
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -9,23 +8,40 @@ import { addToCart } from '../../redux/actionCreators/cartActionCreators';
 import { addToFavorites, removeFromFavorites } from '../../redux/actionCreators/favoriteActionCreators';
 import StarRating from '../StarRating/StarRating';
 import HeartIcon from '../../Icons/HeartIcon';
+import { Newsletter } from '../Newsletter/Newsletter';
+import { FacebookIcon } from '../../Icons/FacebookIcon';
+import { TwitterIcon } from '../../Icons/TwitterIcon';
+import { HorizontIcon } from '../../Icons/HorizontIcon';
+import { DetailBookRow } from '../DetailBookRow/DetailBookRow';
+import Modal from '../Modal/Modal'; // Добавьте компонент Modal для всплывающих окон
 
 const BookDetail = () => {
     const dispatch = useDispatch();
     const selected = useSelector((state: { books: INewBookState }) => state.books.selectedBook);
     const favorites = useSelector((state: { favorites: { items: IBook[] } }) => state.favorites.items);
+    const accessToken =localStorage.getItem('access')
     const { isbn13 = '' } = useParams();
     const [activeTab, setActiveTab] = useState('description');
+    const [showModal, setShowModal] = useState(false); 
+    const books = useSelector((state: { books: INewBookState }) => state.books.books);
 
     useEffect(() => {
         dispatch(loadSelectedBook(isbn13));
     }, [isbn13]);
 
     const handleAddToCart = () => {
+        if (!accessToken) {
+            setShowModal(true);
+            return;
+        }
         dispatch(addToCart(selected));
     };
 
     const handleToggleFavorites = () => {
+        if (!accessToken) {
+            setShowModal(true);
+            return;
+        }
         if (isFavorite) {
             dispatch(removeFromFavorites(selected.isbn13.toString()));
         } else {
@@ -37,6 +53,11 @@ const BookDetail = () => {
 
     return (
         <div className='detailbook'>
+            {showModal && (
+                <Modal onClose={() => setShowModal(false)}>
+                    <p>Please log in to add items to your cart or favorites.</p>
+                </Modal>
+            )}
             <div className="detailbook_title">{selected.title}</div>
             
             <div className="detailbook_blockbook">
@@ -86,9 +107,22 @@ const BookDetail = () => {
                     <div className="authors_txt">{selected.authors}</div>
                 )}
                 {activeTab === 'reviews' && (
-                    <div className="reviews_txt">Txt reviews</div>
+                    <div className="reviews_txt">Fill this section in with your proposal for the package, and send the link to this page out for discussion.
+
+                    Keep this section up to date over the course of the email conversation until the proposal is accepted.
+                    
+                    When appropriate, add a parallel "API proposal" section</div>
                 )}
             </div>
+            <div className="links">
+                <a href="" className="links_facebook"><FacebookIcon/></a>
+                <a href="" className="links_twitter"><TwitterIcon/></a>
+                <a href="" className="links_twitter"><HorizontIcon/></a>
+            </div>
+
+            <Newsletter/>
+            <DetailBookRow books={books}/>
+
         </div>
     );
 };

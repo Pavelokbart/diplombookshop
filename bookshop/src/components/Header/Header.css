@@ -22,13 +22,15 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     overflow: hidden;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .header__search input {
     border: none;
     padding: 10px;
     outline: none;
+    width: 100%;
     width: 580px;
 }
 
@@ -50,5 +52,14 @@
 .header__cart-link, .header__user-link, .header__favorites-link  {
     text-decoration: none; 
     color: inherit; 
+}
+@media screen and (max-width: 360px)  { 
+    .header__search
+    {
+        display: none;
+    }
+    
+    
+
 }
 

@@ -1,16 +1,15 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { INewBooksProps, INewBookState } from "../../../types";
-import { BlockBoks } from "../BlockBoks";
-import { Pagination } from '../../Pagination';
-import './NewBooksRow.css';
-import { setCurrentPage } from '../../../redux/actionCreators/booksActionCreators';
+import { INewBooksProps,INewBookState } from '../../types';
+import { BlockBoks } from '../NewBooks/BlockBoks';
+import { Pagination } from '../Pagination';
+import './DetailBookRow.css';
+import { setCurrentPage } from '../../redux/actionCreators/booksActionCreators';
 import { useEffect } from 'react';
-import { Newsletter } from '../../Newsletter/Newsletter';
 
-const NewBooksRow = ({ books }: INewBooksProps) => {
+const DetailBookRow = ({ books }: INewBooksProps) => {
     const dispatch = useDispatch();
     const currentPage = useSelector((state: { books: INewBookState }) => state.books.currentPage);
-    const itemsPerPage = 8;  
+    const itemsPerPage = 3;  // Set the items per page to 3
 
     useEffect(() => {
         dispatch(setCurrentPage(1));
@@ -28,16 +27,15 @@ const NewBooksRow = ({ books }: INewBooksProps) => {
 
     return (
         <div>
-            <div className="newbooks">NEW RELEASES BOOKS</div>
-            <div className="booksrow">
+            <div className="similarbooks">SIMILAR BOOKS</div>
+            <div className="booksrows">
                 {selectedBooks.map((book, index) => (
                     <BlockBoks key={index} {...book} />
                 ))}
             </div>
             <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
-            <Newsletter />
         </div>
     );
 };
 
-export { NewBooksRow };
+export { DetailBookRow };

@@ -1,44 +1,68 @@
-.prevnext {
+/* Pagination.css */
+
+.pagination-container {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #DADADA;
-    padding-top: 72px;
-}
-
-.prevnext_prev, .prevnext_next {
-    display: flex;
     align-items: center;
-    gap: 23px;
+    margin-top: 20px;
+    width: 100%;
 }
 
-.txtnext_firstcolum, .txtprev_firstcolum {
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: left;
-}
-
-.txtprev_secondcolum, .txtnext_secondcolum {
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
-    color: #8D8E97;
-}
-
-.prev_button, .next_button {
-    border: none;
-    background: none;
+.pagination {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px;
-    cursor: pointer;
+    width: 100%;
+    position: relative;
 }
 
-.prev_button:disabled, .next_button:disabled {
-    opacity: 0.5;
+.prev-button,
+.next-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000;
+    position: absolute;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+.page-numbers {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.page-number {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 16px;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.page-number:hover {
+    background-color: #f0f0f0;
+}
+
+.page-number.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.prev-button:disabled,
+.next-button:disabled {
     cursor: not-allowed;
+    color: #ccc;
 }

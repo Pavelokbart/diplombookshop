@@ -1,0 +1,76 @@
+.newsblock {
+    margin-top: 72px;
+    width: 100%;
+    max-width: 1300px;
+    padding: 40px;
+    background: #F4EEFD;
+    
+    box-sizing: border-box;
+}
+
+.newsblock_title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.newsblock_txt {
+    font-family: 'DIN Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: #A8A8A8;
+    margin-bottom: 24px;
+}
+
+.newsblock_form {
+    display: flex;
+    align-items: center;
+}
+
+.newsblock_input {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.newsblock_input::placeholder {
+    color: #A8A8A8;
+}
+
+.newsblock_button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.newsblock_button:hover {
+    background-color: #555;
+}
+
+
+@media screen and (max-width: 360px)  {
+    .newsblock_form
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .newsblock
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
